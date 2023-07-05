@@ -1,0 +1,39 @@
+<html>
+    <script>
+        
+        var kendaraanUser = prompt( 'Motor atau Mobil?');
+        
+
+        if (kendaraanUser === 'Motor') {
+            var jamParkir = prompt ('Berapa jam anda parkir motor?');
+            var bayarparkirMotor = jamParkir * 2000 - 1000
+            alert ('Anda parkir motor selama ' + jamParkir + ' jam' + '. Total biaya parkir yang harus anda bayar adalah Rp. '+ bayarparkirMotor)
+        
+        } else if (kendaraanUser === 'Mobil') {
+            var jamParkirMobil = prompt ('Berapa jam anda parkir mobil?');
+            var bayarParkirMobil = jamParkirMobil * 3000 + 1000
+            alert ('Anda parkir mobil selama '+ jamParkirMobil + ' jam'+ '. Total biaya parkir yang harus anda bayar adalah Rp. ' + bayarParkirMobil)
+        
+        } else {
+            alert ('Salah input BOS!')
+        }
+        
+
+
+        // var kendaraanUser = prompt( 'Motor atau Mobil?');
+        // var parkirmotor = 1000
+        // var parkirmotor1 = parkirmotor + 2000 * (jamParkirMotor - 1)
+        
+
+        // if (kendaraanUser === 'Motor') {
+        //     var jamParkirMotor = prompt ('Berapa jam anda parkir motor?');
+        // } else if (jamParkirMotor = 1) { console.log ('Anda parkir motor selama ' + jamParkirMotor + ' jam.' + 
+        // ' Total biaya parkir yang harus anda bayar adalah Rp. ' + parkirmotor)
+        // } else if (jamParkirMotor > 1) { console.log ('Anda parkir motor selama ' + jamParkirMotor + ' jam.' + 
+        // ' Total biaya parkir yang harus anda bayar adalah Rp. ' + parkirmotor1)
+        // } else ('Salah input BOS!')
+
+
+
+    </script>
+</html>

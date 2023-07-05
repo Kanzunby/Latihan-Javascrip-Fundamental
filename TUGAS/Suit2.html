@@ -1,0 +1,54 @@
+<html>
+    <script>
+ var tanya = true;
+ while (tanya) {
+    var B = 'Batu'
+    var K = 'Kertas'
+    var G = 'Gunting'
+    
+    var user = prompt (`Pilih salah satau : Batu, Kertas, Gunting!`)
+    if (user != B & user != K & user != G) {
+        alert ('Input yang anda masukan SALAH!!')
+        throw Error ()
+    } 
+    console.log (user)
+
+
+    var comp = Math.random ();
+    if ( comp > 0.67) {
+        comp = 'Batu'
+    } else if (comp > 0.34) {
+        comp = 'Kertas'
+    } else {
+        comp = 'Gunting'
+    }
+    console.log (comp)
+
+    var hasil = '';
+
+    if (user == comp) {
+        hasil = 'IMBANG'    
+    } else if ( user == B ) {
+        hasil = (comp == K ) ? 'KALAH' : 'MENANG'
+    } else if (user == B) {
+        hasil = (comp == G) ? 'MENANG' : 'KALAH'
+    } else if (user == K) {
+        hasil = (comp == B) ? 'MENANG' : 'KALAH'
+    } else if (user == K) {
+        hasil = (comp == G) ? 'KALAH' : 'MENANG'
+    } else if (user == G) {
+        hasil = (comp == B) ? 'KALAH' : 'MENANG'
+    } else if (user == G) {
+        hasil = (comp == K) ? 'MENANG' : 'KALAH'
+    }
+
+    alert (`Kamu memilih ${user} dan Komputer memilih ${comp}, hasilnya adalah : KAMU ${hasil}`)
+    console.log (`Kamu memilih ${user} dan Komputer memilih ${comp}, hasilnya adalah : KAMU ${hasil}`)
+
+    tanya = confirm (`Apakah andan ingin memcoba lagi?`);
+}
+    alert (`Terimakasih sudah bermain.`)
+
+
+    </script>
+</html> 

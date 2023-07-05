@@ -1,0 +1,91 @@
+<!--
+  APLIKASI KASIR
+  input
+    - prompt
+    belanja apa
+    1. apel harga 10000
+    2. jeruk harga 30000
+    3. lemon harga 25000
+    - prompt
+    belanja apel berapa buah? 10
+    - alert belanja apel 10 buah, total 100000
+    TUGAS
+    - tetep pake aplikasi ini, lanjutin
+    1.
+    - prompt mau belanja apa dan qty, itu nge prompt terus sampe user belum exit.
+    - ketika user exit, munculin barang apa aja yang dibeli dan qty nya berapa. total belanja juga dimunculin.
+    2.
+    - ketika user input barang yang sama.
+    - qty nya bakal bertambah.
+-->
+<html>
+  <script>
+    var namaBarangs = [
+      "Apel",
+      "Jeruk",
+      "Melon",
+      "Pir",
+      "Semangka",
+      "Anggur",
+      "Ayam",
+      "Ikan",
+      "Rendang",
+      "Telur",
+    ];
+    var hargaBarangs = [
+      20000, 10000, 30000, 25000, 30000, 60000, 20000, 15000, 25000, 10000,
+    ];
+    var sudah = "Exit";
+    var JmlBarang = namaBarangs.length;
+
+    var keranjangBarang = [];
+    console.log(keranjangBarang);
+    var jmlQtyBarang = [];
+    console.log(jmlQtyBarang);
+    var hargaSatuanBarang = [];
+    console.log(hargaSatuanBarang);
+    do {
+      var promptText = `
+    DAFTAR JENIS BARANG
+    ===================================\n`;
+
+      for (var i = 0; i < JmlBarang; i++)
+        promptText += `${i + 1}. ${namaBarangs[i]}, Rp. ${hargaBarangs[i]}\n`;
+
+      promptText += `\n ${JmlBarang + 1}. ${sudah}`;
+
+      promptText += `
+    \n===================================
+    SILAHKAN PILIH BARANG SESUAI ANGKA!!`;
+
+      var inputBarangUser = prompt(promptText);
+      if (Number(inputBarangUser) == JmlBarang + 1) {
+        break;
+      }
+
+      var pilihanBarang = namaBarangs[inputBarangUser - 1];
+      var hargaBarang = hargaBarangs[inputBarangUser - 1];
+      var qtyBarang = prompt(`Belanja ${pilihanBarang} berapa buah?`);
+      qtyBarang = Number(qtyBarang);
+
+      if (keranjangBarang.includes(pilihanBarang)) {
+        var indextoEdit = keranjangBarang.indexOf(pilihanBarang);
+        jmlQtyBarang[indextoEdit] += qtyBarang;
+      } else {
+        keranjangBarang.push(pilihanBarang);
+        hargaSatuanBarang.push(hargaBarang);
+        jmlQtyBarang.push(qtyBarang);
+      }
+    } while (inputBarangUser);
+
+    var kuitansi = "Anda membeli \n\n";
+    for (var x = 0; x < keranjangBarang.length; x++)
+      kuitansi += `${x + 1}. ${keranjangBarang[x]} sebanyak ${
+        jmlQtyBarang[x]
+      } pcs X Rp. ${hargaSatuanBarang[x]}/barang, total Rp. ${
+        jmlQtyBarang[x] * hargaSatuanBarang[x]
+      }\n`;
+    alert(kuitansi);
+    console.log(kuitansi);
+  </script>
+</html>

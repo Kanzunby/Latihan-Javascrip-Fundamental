@@ -1,0 +1,104 @@
+<html>
+    <script>
+
+// var userNum = parseInt (prompt ('Tebak angka (1 - 10)'))
+var ulang = true
+while (ulang) {
+alert ('Tebak angka (1 - 10) \n Kamu punya 3 kesempatan!')
+
+var comp = Math.random ();
+if (comp < 0.1) {comp = 1}
+if (comp < 0.2) {comp = 2}
+if (comp < 0.3) {comp = 3}
+if (comp < 0.4) {comp = 4}
+if (comp < 0.5) {comp = 5}
+if (comp < 0.6) {comp = 6}
+if (comp < 0.7) {comp = 7}
+if (comp < 0.8) {comp = 8}
+if (comp < 0.9) {comp = 9}
+if (comp < 01) {comp = 10}
+
+console.log (comp)
+
+// var kesempatan = 2
+// var hasiln = true
+// while (hasiln && kesempatan >= 0)  {
+// var user = prompt ('Masukan angka tebakan!')
+// if (user === '') {
+//     alert ('Anda tidak memasukan angka!')
+//     throw Error ()
+// }
+// var userNum = Number (user)
+// if (isNaN (userNum)) {
+//     alert ('Anda harus memasukan angka')
+//     throw Error ()
+// }
+// if (userNum == 0 || userNum > 10) {
+//     alert ('Anda harus memasukan angka diantara 1 - 10!')
+//     throw Error ()
+// }
+// console.log (userNum)   
+
+// if (userNum > comp) {
+//     hasiln = true
+//     hasil = 'BESAR'
+// } else if (userNum < comp) {
+//     hasiln = true
+//     hasil = 'KECIL'
+// } else {
+//     hasiln = false
+//     hasil = 'BENAR'
+// } 
+
+// if (hasiln) {
+//     alert (`Angka terlalu ${hasil}, Kamu masih punya ${kesempatan} kesempetan`)
+// } else {
+//     alert (`Kamu ${hasil}, angka yang dicari adalah ${comp}`)
+// } kesempatan--
+// } 
+// alert ('Terimakasih')
+
+
+var kesempatan = 2
+var hasiln = true
+while (hasiln && kesempatan >= 0)  {
+var user = prompt ('Masukan angka tebakan!')
+if (user === '') {
+    alert ('Anda tidak memasukan angka!')
+    throw Error ()
+}
+var userNum = Number (user)
+if (isNaN (userNum)) {
+    alert ('Anda harus memasukan angka')
+    throw Error ()
+}
+if (userNum == 0 || userNum > 10) {
+    alert ('Anda harus memasukan angka diantara 1 - 10!')
+    throw Error ()
+}
+console.log (userNum)   
+
+if (userNum > comp) {
+    hasiln = true
+    hasil = 'BESAR'
+} else if (userNum < comp) {
+    hasiln = true
+    hasil = 'KECIL'
+} else {
+    hasiln = false
+    hasil = 'BENAR'
+} 
+
+if (hasiln) {
+    alert (`Angka terlalu ${hasil}, Kamu punya ${kesempatan} kesempetan`)
+} else {
+    alert (`Kamu ${hasil}, angka yang dicari adalah: ${comp}`)
+} kesempatan--
+} var ulang = confirm ('Main lagi?');
+} 
+alert ('Terimakasih')
+
+
+
+    </script>
+</html>

@@ -1,0 +1,52 @@
+<html>
+  <script>
+    var tinggiBadan = prompt(`Berapa tinggi badan anda dalam satuan cm?`);
+    if (tinggiBadan === "") {
+      alert(`Tinggi badan kosong.`);
+      throw Error();
+    }
+    var tinggiBadanNum = Number(tinggiBadan);
+    if (isNaN(tinggiBadanNum)) {
+      alert(`Tinggi badan harus angka!`);
+      throw Error();
+    }
+
+    var beratBadan = prompt(`Berapa berat badan anda dalam satuan Kg?`);
+    if (beratBadan === "") {
+      alert(`Berat badan kosong.`);
+      throw Error();
+    }
+    var beratBadanNum = Number(beratBadan);
+    if (isNaN(beratBadanNum)) {
+      alert(`Berat badan harus angka!`);
+    }
+
+    var BMI = beratBadanNum / ((tinggiBadanNum * tinggiBadanNum) / 10000);
+    if (BMI > 30) {
+      var ket = "Berat badan Obesitas";
+    } else if ((BMI <= 29.9) & (BMI >= 23)) {
+      var ket = "Berat badan Berlebih";
+    } else if ((BMI <= 22.9) & (BMI >= 18.5)) {
+      var ket = "Berat badan Ideal";
+    } else {
+      var ket = "Berat badan Kurang";
+    }
+
+    alert(`Kamu memiliki ${ket}, BMI kamu ${BMI}`);
+  </script>
+</html>
+
+//
+<!--
+
+//   Apps 1
+//   Aplikasi penghitung BMI. coba cari sendiri gimana cara menghitung BMI yaak. selamat googling.
+
+//   input user,
+//     berapa tinggi badan?
+//     berapa berat badan?
+
+//   hasil
+//     Kamu xxx, BMI kamu xxx
+
+// -->

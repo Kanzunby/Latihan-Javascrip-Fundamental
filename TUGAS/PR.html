@@ -1,0 +1,123 @@
+<html>
+    <script>
+
+        // var namabarang = prompt ('Apa yang anda beli?')
+        // var jmlbarang = prompt ('Berapa jumlahnya?')
+        // var hargaBarang = prompt ('Berapa harga satuannya?')
+        // var totalHarga = jmlbarang * hargaBarang
+        // var diskon1 = totalHarga * 0.1
+        // var diskon2 = totalHarga * 0.2
+        // console.log (jmlbayar = totalHarga)
+        // console.log (jmlbayar1 = totalHarga - diskon1)
+        // console.log (jmlbayar2 = totalHarga - diskon2)
+
+       //apps 1 
+
+    //     if (totalHarga <= 100000) {alert ('Anda membeli barang berupa ' + namabarang + ' berjumlah ' + jmlbarang + 
+    //     ' dengan harga satuan Rp. '+ hargaBarang + '. Jadi total yang harus dibayar berjumlah Rp. ' + jmlbayar)
+    
+    // }   else if (100000 < totalHarga & totalHarga <= 200000) {alert ('Anda membeli barang berupa ' + namabarang + ' berjumlah ' + jmlbarang + 
+    //     ' dengan harga satuan Rp. ' + hargaBarang+ ' dan diskon 10%' + '. Jadi total yang harus dibayar berjumlah Rp. ' + jmlbayar1)
+    
+    // }   else {alert ('Anda membeli barang berupa ' + namabarang + ' berjumlah ' + jmlbarang + ' dengan harga satuan Rp. ' + hargaBarang +
+    //     ' dan diskon 20%' + '. Jadi total yang harus dibayar berjumlah Rp. ' + jmlbayar2)
+    // }
+
+        
+    //     if (totalHarga <= 100000) {console.log ('Anda membeli barang berupa ' + namabarang + ' berjumlah ' + jmlbarang + 
+    //     ' dengan harga satuan Rp. '+ hargaBarang + '. Jadi total yang harus dibayar berjumlah Rp. ' + jmlbayar)
+    
+    // }   else if (100000 < totalHarga & totalHarga <= 200000) {console.log ('Anda membeli barang berupa ' + namabarang + ' berjumlah ' + jmlbarang + 
+    //     ' dengan harga satuan Rp. ' + hargaBarang+ ' dan diskon 10%' + '. Jadi total yang harus dibayar berjumlah Rp. ' + jmlbayar1)
+    
+    // }   else {console.log ('Anda membeli barang berupa ' + namabarang + ' berjumlah ' + jmlbarang + ' dengan harga satuan Rp. ' + hargaBarang +
+    //     ' dan diskon 20%' + '. Jadi total yang harus dibayar berjumlah Rp. ' + jmlbayar2)
+    // }
+        
+        
+               
+        //apps 2       
+        
+//         console.log ('Anda membeli barang berupa ' + namabarang + ' berjumlah ' + jmlbarang + 
+//         '. Jadi total yang harus dibayar berjumlah Rp. ')
+
+//         alert ('Anda membeli barang berupa ' + namabarang + ' berjumlah ' + jmlbarang + 
+//         '. Jadi total yang harus dibayar berjumlah Rp. ')
+// //Bagaimana agar di bawah ini bisa menjadi output dan dimasukkan ke bagian atas setelah Rp
+//         if (totalHarga <= 100000) {console.log (totalHarga)
+//     }   else if (100000 <= totalHarga & totalHarga <= 200000) {console.log (totalHarga - diskon1)
+//     }   else {console.log (totalHarga - diskon2)
+//     }
+        
+    
+    
+    //apps 3
+
+    var namabarang = prompt ('Apa yang anda beli?')
+    if (namabarang == '') {
+        alert ('Nama barang kosong.')
+        throw Error ()
+    }
+    var namabarangs = Number (namabarang)
+    if (isNaN (namabarangs) === false) {
+        alert ('Nama barang tidak boleh angka !')
+        throw Error ()
+    }
+
+
+    var jmlbarang = prompt ('Berapa jumlahnya?')
+    if (jmlbarang == '' ) { 
+        alert ('Jumlah barang kosong.')
+    }
+    var jmlbarangn = Number (jmlbarang)
+    if (isNaN (jmlbarangn) === true) {
+        alert ('Jumlah barang harus angka!')
+        throw Error ()
+    }
+
+
+    var hargaBarang = prompt ('Berapa harga satuannya?')
+    if (hargaBarang === '') {
+        alert ('Harga barang kosong.')
+        throw Error ()
+    }
+    var hargaBarangn = Number (hargaBarang)
+    if (isNaN (hargaBarangn) === true) {
+        alert ('Harga barang harus angka !')
+        throw Error ()
+    }
+
+    
+    var totalHarga = jmlbarangn * hargaBarangn
+    var hargaDiskon;
+    var DapatDiskon;
+
+    if (totalHarga > 200000) {
+        DapatDiskon = true
+        hargaDiskon = totalHarga - (totalHarga * 0.2)
+    } else if (totalHarga > 100000) {
+        DapatDiskon = true
+        hargaDiskon = totalHarga - (totalHarga * 0.1)
+    } else {
+        DapatDiskon = false
+        hargaDiskon = totalHarga
+    }
+
+    var Kuitansi = `Anda membeli ${namabarang} sebanyak ${jmlbarang}
+    dengan harga satuan Rp. ${hargaBarang}. Jadi total yang harus anda bayar adalah ${hargaDiskon}`
+
+    if (DapatDiskon) {        Kuitansi =`
+        Selamat.... Anda mendapatkan diskon
+        -----------------
+        Belanja ${namabarang} berjumlah ${jmlbarang}. Total yang harus anda bayar
+        hanya Rp. ${hargaDiskon}`
+        }
+
+        alert (Kuitansi)
+
+
+
+    
+    
+    </script>
+</html>

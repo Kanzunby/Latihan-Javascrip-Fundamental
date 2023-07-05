@@ -1,0 +1,171 @@
+<html>
+  <script>
+
+    
+var jmlH = 7
+var h1 = 'Senin'
+var h2 = 'Selasa'
+var h3 = 'Rabu'
+var h4 = 'Kamis'
+var h5 = `Jum'at` 
+var h6 = `Sabtu`
+var h7 = `Minggu`   
+
+
+    var hari = prompt ('Sekarang hari apa? (Tulis nama hari diawali dengan huruf besar)')
+    if (hari === '') {
+      alert (`Hari kosong.`)
+      throw Error ()
+    } if (hari != h1 & hari != h2 & hari != h3 & hari!=h4 & hari != h5 & hari != h6 & hari != h7) {
+      alert ('Hari harus diantara senin sampai minggu!')
+      throw Error ()
+    } 
+    
+
+    var hariTambah = prompt ('Mau maju berapa hari?')
+    if (hariTambah === '') {
+      alert ('Tambahan hari kosong')
+    }
+    var hariTambahNum = Number (hariTambah)
+    if (isNaN (hariTambahNum)) {
+      alert ('Tambahan hari harus angka')
+    }
+
+
+    hariIn = hari
+    haribesok = hariTambahNum % jmlH
+    console.log (hariIn)
+    console.log (haribesok)   
+    
+    if (hariIn == h1 && haribesok == 1) {
+      hariOut = h2
+    } else if (hariIn == h1 && haribesok == 2) {
+      hariOut = h3
+    } else if (hariIn == h1 && haribesok == 3) {
+      hariOut = h4
+    } else if (hariIn == h1 && haribesok == 4) {
+      hariOut = h5
+    } else if (hariIn == h1 && haribesok == 5) {
+      hariOut = h6
+    } else if (hariIn == h1 && haribesok == 6) {
+      hariOut = h7
+    } else if (hariIn == h1 && haribesok == 0) {
+      hariOut = h1
+    }
+    
+    
+    if (hariIn == h2 && haribesok == 1) {
+      hariOut = h3
+    } else if (hariIn == h2 && haribesok == 2) {
+      hariOut = h4
+    } else if (hariIn == h2 && haribesok == 3) {
+      hariOut = h5
+    } else if (hariIn == h2 && haribesok == 4) {
+      hariOut = h6
+    } else if (hariIn == h2 && haribesok == 5) {
+      hariOut = h7
+    } else if (hariIn == h2 && haribesok == 6) {
+      hariOut = h1
+    } else if (hariIn == h2 && haribesok == 0) {
+      hariOut = h2
+    }
+
+    if (hariIn == h3 && haribesok == 1) {
+      hariOut = h4
+    } else if (hariIn == h3 && haribesok == 2) {
+      hariOut = h5
+    } else if (hariIn == h3 && haribesok == 3) {
+      hariOut = h6
+    } else if (hariIn == h3 && haribesok == 4) {
+      hariOut = h7
+    } else if (hariIn == h3 && haribesok == 5) {
+      hariOut = h1
+    } else if (hariIn == h3 && haribesok == 6) {
+      hariOut = h2
+    } else if (hariIn == h3 && haribesok == 0) {
+      hariOut = h3
+    }
+
+    if (hariIn == h4 && haribesok == 1) {
+      hariOut = h5
+    } else if (hariIn == h4 && haribesok == 2) {
+      hariOut = h6
+    } else if (hariIn == h4 && haribesok == 3) {
+      hariOut = h7
+    } else if (hariIn == h4 && haribesok == 4) {
+      hariOut = h1
+    } else if (hariIn == h4 && haribesok == 5) {
+      hariOut = h2
+    } else if (hariIn == h4 && haribesok == 6) {
+      hariOut = h3
+    } else if (hariIn == h4 && haribesok == 0) {
+      hariOut = h4
+    }
+
+    if (hariIn == h5 && haribesok == 1) {
+      hariOut = h6
+    } else if (hariIn == h5 && haribesok == 2) {
+      hariOut = h7
+    } else if (hariIn == h5 && haribesok == 3) {
+      hariOut = h1
+    } else if (hariIn == h5 && haribesok == 4) {
+      hariOut = h2
+    } else if (hariIn == h5 && haribesok == 5) {
+      hariOut = h3
+    } else if (hariIn == h5 && haribesok == 6) {
+      hariOut = h4
+    } else if (hariIn == h5 && haribesok == 0) {
+      hariOut = h5
+    }
+
+    if (hariIn == h6 && haribesok == 1) {
+      hariOut = h7
+    } else if (hariIn == h6 && haribesok == 2) {
+      hariOut = h1
+    } else if (hariIn == h6 && haribesok == 3) {
+      hariOut = h2
+    } else if (hariIn == h6 && haribesok == 4) {
+      hariOut = h3
+    } else if (hariIn == h6 && haribesok == 5) {
+      hariOut = h4
+    } else if (hariIn == h6 && haribesok == 6) {
+      hariOut = h5
+    } else if (hariIn == h6 && haribesok == 0) {
+      hariOut = h6
+    }
+
+    if (hariIn == h7 && haribesok == 1) {
+      hariOut = h1
+    } else if (hariIn == h7 && haribesok == 2) {
+      hariOut = h2
+    } else if (hariIn == h7 && haribesok == 3) {
+      hariOut = h3
+    } else if (hariIn == h7 && haribesok == 4) {
+      hariOut = h4
+    } else if (hariIn == h7 && haribesok == 5) {
+      hariOut = h5
+    } else if (hariIn == h7 && haribesok == 6) {
+      hariOut = h6
+    } else if (hariIn == h7 && haribesok == 0) {
+      hariOut = h7
+    }
+
+    alert (`Sekarang adalah hari ${hariIn}, ${hariTambahNum} hari lagi adalah hari ${hariOut}`)
+    console.log (`Sekarang adalah hari ${hariIn}, ${hariTambahNum} hari lagi adalah hari ${hariOut}`)
+    
+  </script>
+</html>
+
+
+
+
+// <!--
+//   Apps 2
+//   Aplikasi penghitung hari.
+
+//   Input user,
+//     Sekarang hari apa? (senin, selasa, rabu, kamis, jumat, sabtu, minggu)
+//     Mau maju berapa hari? (misal 100)
+//   hasil
+//     Sekarang hari x, 100 hari setelah hari x adalah hari y
+//  -->
