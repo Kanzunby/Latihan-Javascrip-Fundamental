@@ -1,0 +1,46 @@
+<html>
+  <script>
+    var barangs = [
+      "apel",
+      "jeruk",
+      "lemon",
+      "ayam",
+      " bebek",
+      "ikan",
+      "nasi",
+      "rendang",
+    ];
+    var hargaBarangs = [10000, 30000, 25000, 40000, 50000, 25000, 12000, 27000];
+    var totalJenisBarang = barangs.length;
+
+    var promtText1 = `
+MAU BELANJA APA???
+===========================================\n\n`;
+
+    var i = 0;
+    while (i < totalJenisBarang) {
+      promtText1 += `${i + 1}. ${barangs[i]}, Rp. ${hargaBarangs[i]} \n`;
+      i++;
+    }
+
+    promtText1 += `
+=========================================  
+Silahkan pilih angka!`;
+
+    var inputBarangUser = prompt(promtText1);
+    console.log(inputBarangUser);
+
+    var pilihanBarang = barangs[inputBarangUser - 1];
+    console.log(pilihanBarang);
+
+    var hargaBarang = hargaBarangs[inputBarangUser - 1];
+    console.log(hargaBarang);
+
+    var qtyBelanja = prompt(`Belanja ${pilihanBarang} berapa buah?`);
+    var totalBelanja = Number(qtyBelanja) * hargaBarang;
+
+    alert(
+      `Anda belanja ${pilihanBarang} sebanyak ${qtyBelanja}, total Rp. ${totalBelanja}`
+    );
+  </script>
+</html>

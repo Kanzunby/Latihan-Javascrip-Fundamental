@@ -1,0 +1,43 @@
+<html>
+  <script>
+    // var nama = "Kanzun Bairuha";
+    // var hurufYgDicari = "a";
+    // var jmlHurufDicari = 0;
+
+    // var pointer = 0;
+    // while (pointer < nama.length) {
+    //   if (nama.charAt(pointer) === hurufYgDicari) {
+    //     jmlHurufDicari++;
+    //   }
+    //   pointer++;
+    // }
+
+    // console.log(
+    //   `Huruf ${hurufYgDicari} dalam nama ${nama} ada ${jmlHurufDicari} buah`
+    // );
+
+    alert("Aplikasi penghitung huruf!!");
+    var inputNama = prompt("Masukan Nama kamu!");
+    var inputNamas = Number(inputNama);
+    if (isNaN(inputNamas)) {
+      aler("Masukan huruf, bukan Angka!");
+      throw Error();
+    }
+
+    var hurufYgDicari = prompt("Masukan huruf yang ingin dicari!");
+
+    var jmlHurufygDicari = 0;
+    var pointer = 0;
+
+    while (pointer < inputNama.length) {
+      var huruf = inputNama.charAt(pointer);
+      if (huruf === hurufYgDicari) {
+        jmlHurufygDicari++;
+      }
+      pointer++;
+    }
+    alert(
+      `Huruf ${hurufYgDicari} di dalam nama ${inputNama} ada ${jmlHurufygDicari} huruf`
+    );
+  </script>
+</html>

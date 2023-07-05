@@ -1,0 +1,36 @@
+<html>
+  <!-- 
+    Looping vs Pengondisian
+
+    pengondisian
+    if (conditional) {
+        action
+    }
+
+    Looping
+    while (conditional) {
+        action
+    }
+
+    - Pengondisian jalan sekali
+    - Looping bakal berjalan terus selama kondisi true
+    - harus bisa membuat kondisi false untuk menghentikan loop. jika tidak akan masuk ke infinit loop
+    - escape condition, agar bisa keluar dari loop
+
+ -->
+  <script>
+    var iscobalagi = true;
+
+    while (iscobalagi) {
+      var inputNama = prompt("Masukan namamu, harus 5 huruf!");
+      var inputNamalengt = inputNama.length;
+
+      if (inputNamalengt === 5) {
+        iscobalagi = false;
+        alert(`Halloh ${inputNama}`);
+      } else {
+        alert(`Input nama harus 5 huruf!`);
+      }
+    }
+  </script>
+</html>

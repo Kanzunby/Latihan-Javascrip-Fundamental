@@ -1,0 +1,99 @@
+<html>
+  <!--
+
+    1. untuk membungkus code code yang sering dipake
+    2. simply, buat code sekali, nanti kita bisa panggil berkali kali
+    3. jadi ada dua tahap, bikin function, terus panggil function
+   -->
+  <script>
+    // contoh 1
+    // basic syntax dari function
+    function namaFunction() {
+      // disini code yang bakal dipakai berkali kali
+      console.log("Hello world");
+      console.log("test");
+      console.log("ini di dalam function");
+    }
+
+    // calling function
+    namaFunction();
+    namaFunction();
+
+    function kataJamak(i, namaSesuatu) {
+      if (i > 1) {
+        return i + " " + namaSesuatu + "s";
+      } else {
+        return i + " " + namaSesuatu;
+      }
+    }
+    console.log(kataJamak(5, "apel"));
+    console.log(kataJamak(1, "apel"));
+
+    function HurufBesar(nama) {
+      var besar = nama.slice(0, 1).toUpperCase();
+      var kecil = nama.slice(1);
+      console.log(besar + kecil);
+    }
+    HurufBesar("bairuha");
+
+    function shortcut(string) {
+      return string.replace(/[aeiou]/g, "");
+    }
+    console.log(shortcut("kanzun"));
+
+    function contaminasi(text, char) {
+      if (text.length == 0 || char.length == 0) {
+        return "";
+      } else {
+        chart = "";
+        for (i = 0; i < text.length; i++) {
+          chart += char;
+        }
+        return chart;
+      }
+    }
+    console.log(contaminasi("bairuha", ""));
+
+    var bin = "00110010";
+    decimal = 0;
+    for (i = 0; i < bin.length; i++) console.log(bin.charAt(i));
+    for (x = bin.length; x > 0; x--) console.log(2 ** (x - 1));
+    decimal += bin.charAt(i) * 2 ** (x - 1);
+    console.log();
+
+    // var decimal = 0;
+    // console.log(
+    //   // decimal +
+    //   bin.charAt(1 - 1) * 2 ** (8 - 1) +
+    //     bin.charAt(2 - 1) * 2 ** (7 - 1) +
+    //     bin.charAt(3 - 1) * 2 ** (6 - 1) +
+    //     bin.charAt(4 - 1) * 2 ** (5 - 1)
+    // +
+    // bin.charAt(5 - 1) * 2 ** (4 - 1) +
+    // bin.charAt(6 - 1) * 2 ** (3 - 1) +
+    // bin.charAt(7 - 1) * 2 ** (2 - 1) +
+    // bin.charAt(8 - 1) * 2 ** (1 - 1)
+    // );
+
+    function problem(x) {
+      if (typeof x === "number") {
+        return x * 50 + 6;
+      } else {
+        return "Error";
+      }
+    }
+    console.log(problem("str"));
+
+    function position(letter) {
+      var alfa = "abcdefghijklmnopqrstuvwxyz";
+      return alfa.charAt(letter - 1);
+    }
+    console.log(position(4));
+
+    function addLength(str) {
+      var str2 = str.split();
+      return str2;
+    }
+    console.log(addLength("kanzun bairuha"));
+  </script>
+</html>

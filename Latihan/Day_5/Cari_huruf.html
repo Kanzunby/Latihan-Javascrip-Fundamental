@@ -1,0 +1,58 @@
+<html>
+  <script>
+    do {
+      alert("Aplikasi penghitung huruf!!");
+      do {
+        var inputNama = prompt("Masukan Nama kamu!");
+        var inputNamast = Number(inputNama);
+        if (isNaN(inputNamast)) {
+          break;
+        } else alert("Nama harus berupa huruf");
+      } while (true);
+
+      do {
+        var hurufYgDicari = prompt("Masukan huruf yang ingin dicari!");
+        var hurufYgDicarist = Number(hurufYgDicari);
+
+        if (isNaN(hurufYgDicarist) && hurufYgDicari.length === 1) {
+          break;
+        } else {
+          alert("Masukan hanya 1 huruf dan bukan angka");
+        }
+      } while (true);
+
+      var jmlHurufygDicari = 0;
+      var pointer = 0;
+
+      inputNama = inputNama.toLocaleUpperCase();
+      hurufYgDicari = hurufYgDicari.toLocaleUpperCase();
+
+      while (pointer < inputNama.length) {
+        var huruf = inputNama.charAt(pointer);
+        if (huruf === hurufYgDicari) {
+          jmlHurufygDicari++;
+        }
+        pointer++;
+      }
+
+      var isUsertryagain = confirm("Coba lagi?");
+      if (isUsertryagain === false) {
+        alert("Terimaksih !!");
+        break;
+      }
+    } while (true);
+    // var jmlHurufygDicari = 0;
+    // var pointer = 0;
+
+    // while (pointer < inputNama.length) {
+    //   var huruf = inputNama.charAt(pointer);
+    //   if (huruf === hurufYgDicari) {
+    //     jmlHurufygDicari++;
+    //   }
+    //   pointer++;
+    // }
+    // alert(
+    //   `Huruf ${hurufYgDicari} di dalam nama ${inputNama} ada ${jmlHurufygDicari} huruf`
+    // );
+  </script>
+</html>

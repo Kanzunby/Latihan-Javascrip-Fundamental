@@ -1,0 +1,46 @@
+<html>
+  <script>
+    var barang1 = "apel";
+    var hargabarang1 = 10000;
+
+    var barang2 = "jeruk";
+    var hargabarang2 = 30000;
+
+    var barang3 = "lemon";
+    var hargabarang3 = 25000;
+
+    var inputBarangUser = prompt(`
+        MAU BELANJA APA??
+        =========
+        1. ${barang1}, Rp. ${hargabarang1}
+        2. ${barang2}, Rp. ${hargabarang2}
+        3. ${barang3}, Rp. ${hargabarang3}
+        =========
+        Masukan nomor barang yang mau dibeli!`);
+
+    var pilihanBarang;
+    var hargaBarang;
+
+    if (inputBarangUser === "1") {
+      pilihanBarang = barang1;
+      hargaBarang = hargaBarang1;
+    } else if (inputBarangUser === "2") {
+      pilihanBarang = barang2;
+      hargaBarang = hargabarang2;
+    } else if (inputBarangUser === "3") {
+      pilihanBarang = barang3;
+      hargaBarang = hargabarang3;
+    } else {
+      alert("Salah input");
+      throw new Error();
+    }
+
+    var qtyBelanja = prompt(`Belanja ${pilihanBarang} berapa buah?`);
+    var totalBelanja = Number(qtyBelanja) * hargaBarang;
+    console.log(totalBelanja);
+
+    alert(
+      `Anda belanja ${pilihanBarang} sebanyak ${qtyBelanja}, total belanja Rp. ${totalBelanja}`
+    );
+  </script>
+</html>

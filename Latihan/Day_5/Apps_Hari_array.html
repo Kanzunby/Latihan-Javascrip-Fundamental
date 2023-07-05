@@ -1,0 +1,57 @@
+<html>
+  <script>
+    var hariarr = [
+      "Senin",
+      "Selasa",
+      "Rabu",
+      "Kamis",
+      "Jum'at",
+      "Sabtu",
+      "Minggu",
+    ];
+    console.log(hariarr[6]);
+    var jmlHari = hariarr.length;
+
+    do {
+      var inputHari = prompt("Sekarang hari apa?");
+      inputHari.toLocaleUpperCase();
+      if (hariarr.includes(inputHari)) {
+        break;
+      }
+    } while (true);
+
+    do {
+      var hariTambah = prompt("Mau maju berapa hari?");
+      var hariTambahNum = Number(hariTambah);
+      if (hariTambahNum !== "" && isNaN(hariTambahNum) === false) {
+        break;
+      }
+    } while (true);
+
+    var sisaHari = hariTambahNum % jmlHari;
+    console.log(sisaHari);
+    var inputHariconvert = hariarr.indexOf(inputHari) + 1;
+    console.log(inputHariconvert);
+    var resultHari = sisaHari + inputHariconvert;
+    console.log(resultHari);
+
+    if (resultHari === jmlHari) {
+      resultHariN = resultHari - 1;
+    } else {
+      var resultHariN = (resultHari % jmlHari) - 1;
+    }
+
+    // di sini akan terjadi error jika hasilnya hari minggu, karena hasil convert dari hari minggu adalah 7 dan jika 7 dimodulo dengan 7 maka hasilnya 0.
+    // 0 - 1 = -1, jadi hasilnya adalah undefined
+    console.log(resultHariN);
+    var resultHariName = hariarr[resultHariN];
+    console.log(resultHariName);
+
+    alert(
+      `Hari ini adalah hari ${inputHari}, ${hariTambahNum} hari dari lagi adalah hari ${resultHariName} `
+    );
+    console.log(
+      `Hari ini adalah hari ${inputHari}, ${hariTambahNum} hari dari lagi adalah hari ${resultHariName} `
+    );
+  </script>
+</html>

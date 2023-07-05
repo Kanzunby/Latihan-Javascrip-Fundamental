@@ -1,0 +1,56 @@
+<html>
+  <script>
+    var product = [
+      { name: "Buku", price: 5000, stock: 200 },
+      { name: "Pulpen", price: 3000, stock: 300 },
+      { name: "Tipe-x", price: 5000, stock: 50 },
+      { name: "Tas", price: 50000, stock: 200 },
+      { name: "Penggaris", price: 3000, stock: 100 },
+      { name: "Pensil", price: 2000, stock: 200 },
+      { name: "Spidol", price: 5000, stock: 200 },
+      { name: "Stabilo", price: 10000, stock: 100 },
+      { name: "Gunting", price: 10000, stock: 100 },
+      { name: "Staples", price: 15000, stock: 30 },
+    ];
+
+    function showProduct(type, additionalText) {
+      var text = "";
+      for (var i = 0; (i = product.length); i++)
+        text += `${i + 1}. ${product[i].name}, Rp. ${
+          product[i].price
+        }, stok = ${product[i].stock}`;
+
+      if (additionalText) {
+        text += additionalText;
+      }
+
+      if (type === "alert") {
+        alert(text);
+      } else if (type === "prompt") {
+        var resultPrompt = prompt(text);
+        return resultPrompt;
+      }
+    }
+
+    function searchProductIndex(productName) {
+      for (var i = 0; i < product.length; i++) {
+        if (product[i].name.toLowerCase() === productName.toLowerCase())
+          return i;
+      }
+    }
+
+    do {
+      var inputMenu = prompt(
+        `Selamat datang di aplikasi inventory, pilih menu\n\n1. Lihat barang\n2. Tambah barang\n3. Update Stok\n4. Delete barang\n5. Exit`
+      );
+
+      if (inputMenu === "5") {
+        break;
+      }
+
+      if (inputMenu === "1") {
+        showProduct("alert");
+      }
+    } while (true);
+  </script>
+</html>
